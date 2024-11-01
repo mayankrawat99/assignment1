@@ -1,0 +1,161 @@
+:root {
+  --black: #212121;
+  --white: #ffffff;
+}
+P{
+  overflow: hidden;
+}
+* {
+  font-family: "montserrat", sans-serif;
+}
+
+body {
+  overflow: scroll; /* Enables scrolling */
+  background-color: var(--black);
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Hides scrollbar */
+}
+.nav {
+  display: flex;
+  color: var(--white);
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+}
+.nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 60px;
+  font-weight: 500;
+  font-size: 14px;
+}
+ul li {
+  cursor: pointer;
+}
+.nav h2 {
+  margin: 0;
+  font-weight: 900;
+}
+li:nth-child(5) {
+  text-decoration: underline;
+}
+.navLogo {
+  cursor: pointer;
+}
+.hero {
+  position: relative;
+}
+.heroText {
+  /* Make the main text color transparent */
+  transition: all ease-in-out 0.3s;
+  color: white;
+  /* -webkit-text-stroke: 1px grey; */
+  font-size: 6rem;
+  font-weight: 900;
+  text-align: center;
+  padding: 60px 20px;
+  transform: scale(
+    1.3,
+    1
+  ); /* Stretch horizontally by 1.5 times, keeping vertical scale at 1 */
+}
+.heroText p {
+  margin: 0;
+  user-select: none;
+
+  margin-bottom: -25px; /* Remove default margin */
+}
+.heroImages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+.heroImages span {
+  width: fit-content;
+  cursor: pointer;
+}
+.image2 {
+  position: absolute;
+  top: 5%;
+  right: 20%;
+  z-index: -1;
+  transition: transform ease-in-out 0.4s;
+}
+.image1 {
+  position: absolute;
+  top: 20%;
+  left: 8%;
+  z-index: -1;
+  transition: transform ease-in-out 0.4s;
+}
+.image3 {
+  position: absolute;
+  top: 65%;
+  left: 18%;
+  z-index: -1;
+  transition: transform ease-in-out 0.4s;
+}
+.image4 {
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  z-index: -1;
+  transition: transform ease-in-out 0.4s;
+}
+.overlay2 {
+  position: absolute;
+  top: 5%;
+  right: 20%;
+  z-index: +1111111;
+  cursor: pointer;
+  height: 180px;
+  width: 290px;
+}
+.overlay1 {
+  position: absolute;
+  top: 20%;
+  left: 8%;
+  z-index: +111111;
+  cursor: pointer;
+  height: 180px;
+  width: 290px;
+}
+.overlay3 {
+  position: absolute;
+  top: 65%;
+  left: 18%;
+  z-index: +111111;
+  cursor: pointer;
+  height: 180px;
+  width: 290px;
+}
+.overlay4 {
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  z-index: +111111;
+  cursor: pointer;
+  height: 180px;
+  width: 290px;
+}
+.overlay1:hover + .image1 {
+  z-index: +999;
+  scale: 1.08;
+}
+.overlay2:hover + .image2 {
+  z-index: +999;
+  scale: 1.08;
+}
+.overlay3:hover + .image3 {
+  z-index: +999;
+  scale: 1.08;
+}
+.overlay4:hover + .image4 {
+  z-index: +999;
+  scale: 1.08;
+}
+.heroImages span {
+  transition: all ease-in-out 0.4s;
+}
